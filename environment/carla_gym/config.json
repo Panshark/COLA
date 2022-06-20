@@ -1,0 +1,46 @@
+{
+    "scenarios": "DEFAULT_SCENARIO_TOWN1",
+    "env": {
+        "enable_planner": true,
+        "server_map": "/Game/Carla/Maps/Town01",
+        "render": true,
+        "render_x_res": 800,
+        "render_y_res": 600,
+        "x_res": 80,
+        "y_res": 80,
+        "framestack": 2,
+        "discrete_actions": true,
+        "squash_action_logits": false,
+        "verbose": false,
+        "use_depth_camera": false,
+        "send_measurements": false,
+        "sync_server": true,
+        "spectator_loc": [200, 56, 10],
+        "fixed_delta_seconds": 0.05,
+        "dynamic_on": true
+    },
+    "actors": {
+        "vehicle1": {
+            "type": "vehicle_4W",
+            "enable_planner": true,
+            "framestack": 2,
+            "convert_images_to_video": false,
+            "early_terminate_on_collision": true,
+            "reward_function": "corl2022",
+            "manual_control": false,
+            "auto_control": false,
+            "camera_type": "rgb",
+            "collision_sensor": "on",
+            "lane_sensor": "on",
+            "log_images": false,
+            "log_measurements": false,
+            "render": false,
+            "render_x_res": 800,
+            "render_y_res": 600,
+            "x_res": 80,
+            "y_res": 80,
+            "use_depth_camera": false,
+            "send_measurements": false
+        }
+    }
+}
