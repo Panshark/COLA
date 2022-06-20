@@ -1,5 +1,5 @@
 # COLA
-A3C model is original implementated by [Palanisamy]([https://github.com/tristandeleu/pytorch-maml-rl](https://github.com/PacktPublishing/Hands-On-Intelligent-Agents-with-OpenAI-Gym)) in Chapter 8.
+A3C model is original implementated by [Palanisamy](https://github.com/PacktPublishing/Hands-On-Intelligent-Agents-with-OpenAI-Gym) in Chapter 8.
 ## Install
 . To create a conda environment:
 ```
