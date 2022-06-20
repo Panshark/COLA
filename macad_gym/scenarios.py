@@ -148,7 +148,7 @@ DEFAULT_SCENARIO_TOWN1 = build_ma_scenario(
         "end": 148
     }},
     max_steps=1200,
-    weathers=[5]
+    weathers=[1]
     # ,
     # vehicles=5,
     # "start": 142,
