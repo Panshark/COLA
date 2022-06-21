@@ -1,6 +1,6 @@
 # COLA
 ## Source code for *Self-Adaptive Driving in Nonstationary Environments through  Conjectural Online Lookahead Adaptation*
-A3C model is original implementated by [Palanisamy](https://github.com/PacktPublishing/Hands-On-Intelligent-Agents-with-OpenAI-Gym) in Chapter 8, the structure of classifer is based on [Rashi Sharma](https://medium.com/swlh/natural-image-classification-using-resnet9-model-6f9dc924cd6d).
+A3C model is original implementated by [Palanisamy](https://github.com/PacktPublishing/Hands-On-Intelligent-Agents-with-OpenAI-Gym) in Chapter 8, the structure of classifer is based on [Rashi Sharma](https://medium.com/swlh/natural-image-classification-using-resnet9-model-6f9dc924cd6d). Both models are deployed in [`deep.py`](function_approximator/deep.py).
 ## Install
 . To create a conda environment:
 ```
