@@ -300,9 +300,9 @@ class Weather(object):
     def __init__(self, weather):
         self.weather = weather
         self._sun = Sun(weather.sun_azimuth_angle, weather.sun_altitude_angle)
-        self._storm = Storm(-50)
+        # self._storm = Storm(-50)
         # self._storm = Storm(weather.precipitation)
-        # self._storm = Storm(random.randint(-50,100))
+        self._storm = Storm(random.randint(-50,100))
 
     def tick(self, delta_seconds):
         # self._sun.tick(delta_seconds)
