@@ -51,4 +51,4 @@ python gradient_COLA_rl_agent.py --env Carla-v0 --gpu-id 0
 python COLA_gradient_agent.py --env Carla-v0 --test --gpu-id 0
 ```
 
-The gradient buffer direction could be modified by line 94 in `gradient_COLA_rl_agent.py`. Modify the `environment/carla_gym/config.json` to set `"dynamic_on": false`. And modify line 151 in `~/macad-gym/src/macad_gym/carla/scenarios.py` for collecting gradients from cloudy (1) and rainy (4). Then change back the `dynamic_on` botton. You can do the COLA Executing now.
+The gradient buffer directory could be modified by line 94 in `gradient_COLA_rl_agent.py`. Modify the `environment/carla_gym/config.json` to set `"dynamic_on": false`. And modify line 151 in `~/macad-gym/src/macad_gym/carla/scenarios.py` for collecting gradients from cloudy (1) and rainy (4). Then change back the `dynamic_on` botton. You can do the COLA Executing now.
