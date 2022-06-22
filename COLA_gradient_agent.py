@@ -37,7 +37,7 @@ parser = ArgumentParser("deep_ac_agent")
 parser.add_argument("--env", help="Name of the Gym environment", default="Pendulum-v0", metavar="ENV_ID")
 parser.add_argument("--params-file", help="Path to the parameters file. Default= ./COLA_rl_parameters.json",
                     default="COLA_gradient_parameters.json", metavar="async_a2c_parameters.json")
-parser.add_argument("--model-dir", default="tool_models/classifier", metavar="MODEL_DIR",
+parser.add_argument("--model-dir", default="tool_models/classifier/", metavar="MODEL_DIR",
                     help="Directory to save/load trained model. Default= ./tool_models/classifier/")
 parser.add_argument("--render", action='store_true', default=False,
                     help="Whether to render the environment to the display. Default=False")
@@ -99,7 +99,7 @@ class DeepActorCriticAgent(mp.Process):
         self.BayesProb = [0.5,0.5]
         self.Bayes = self.params["bayes"]
         self.gradient_size = self.params["gradient_size"]
-        self.gradient_data=[torch.load("gradients/grads1.pth", map_location="cuda:3"),torch.load("gradients/grads4.pth", map_location="cuda:3")]
+        self.gradient_data=[torch.load("gradients/grads1.pth", map_location=device),torch.load("gradients/grads4.pth", map_location=device)]
         self.single_update = self.params['single_update']
         self.dummy_gradient = self.params['dummy_gradient']
         self.grad_filename = os.path.join("./gradients/grads_dy_test.pth")
@@ -186,24 +186,24 @@ class DeepActorCriticAgent(mp.Process):
     def _gradient_update(self, W_num):
             while(True):
               i = random.randint(0,len(self.gradient_data[W_num])-1)
-              if len(self.gradient_data[W_num][i])>self.step_label:
+              if len(self.gradient_data[W_num][i])>self.step_label+1:
                   break
               
             if self.dummy_gradient == 0:
-                self.dummy_gradient = self.gradient_data[W_num][i][self.step_label]
+                self.dummy_gradient = self.gradient_data[W_num][i][self.step_label+1]
             
             
             if self.dummy_gradient != 1:
                 i = 0
                 with torch.no_grad():
-                    for grad in self.gradient_data[W_num][i][self.step_label]:
+                    for grad in self.gradient_data[W_num][i][self.step_label+1]:
                         # params[name] = param - self.params["learning_rate"]/self.gradient_size * grad.to(device)
                         self.dummy_gradient[i] += 1.0/self.gradient_size * grad
                         i += 1
             else:
                 params = self.policy_dy.state_dict()
                 with torch.no_grad():
-                    for (name, param), grad in zip(params.items(), self.gradient_data[W_num][i][self.step_label]):
+                    for (name, param), grad in zip(params.items(), self.gradient_data[W_num][i][self.step_label+1]):
                         params[name] = param - self.params["learning_rate"]/self.gradient_size * grad.to(device)
                     self.policy_dy.load_state_dict(params)
                     self.policy_dy.to(device)
