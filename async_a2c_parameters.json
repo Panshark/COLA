@@ -1,11 +1,11 @@
 {
   "agent":{
     "num_agents": 12,
-    "seed": 1,
+    "seed": 52,
     "summary_file_path_prefix": "./logs/AsyncA2C_weatherdy_dy_measurement",
     "use_cuda": true,
     "learning_rate": 1e-5,
-    "max_num_episodes": 52,
+    "max_num_episodes": 500,
     "gamma": 0.99,
     "learning_step_thresh": 10,
     "clip_rewards": true,
