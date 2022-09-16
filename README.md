@@ -1,6 +1,26 @@
 # COLA
+
 ## Source code for *Self-Adaptive Driving in Nonstationary Environments through  Conjectural Online Lookahead Adaptation*
 A3C model is original implementated by [Palanisamy](https://github.com/PacktPublishing/Hands-On-Intelligent-Agents-with-OpenAI-Gym) in Chapter 8, the structure of classifer is based on [Rashi Sharma](https://medium.com/swlh/natural-image-classification-using-resnet9-model-6f9dc924cd6d). Both models are deployed in [`deep.py`](function_approximator/deep.py).
+
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+## Table of Contents
+
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [Maintainers](#maintainers)
+- [Contributing](#contributing)
+	- [Contributors](#contributors)
+- [License](#license)
+
+## Background
+Powered by deep representation learning, reinforcement learning (RL) provides an end-to-end learning framework capable of solving self-driving (SD) tasks without manual designs. However, time-varying nonstationary environments cause proficient but specialized RL policies to fail at execution time. For example, an RL-based SD policy trained under sunny days does not generalize well to the rainy weather. Even though meta learning enables the RL agent to adapt to new tasks/environments in a sample-efficient way, its offline operation fails to equip the agent with online adaptation ability when facing nonstationary environments. This work proposes an online meta reinforcement learning algorithm based on the **_conjectural online lookahead adaptation_** (COLA). COLA determines the online adaptation at every step by maximizing the agent's conjecture of the future performance in a lookahead horizon.  Experimental results demonstrate that under dynamically changing weather and lighting conditions, the COLA-based self-adaptive driving outperforms the baseline policies in terms of online adaptability.
+
 ## Install
 . To create a conda environment:
 ```
