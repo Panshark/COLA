@@ -106,4 +106,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) © Haozhe Lei
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Panshark/COLA/blob/main/LICENCE) © Haozhe Lei
