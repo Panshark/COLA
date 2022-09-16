@@ -19,6 +19,7 @@ A3C model is original implementated by [Palanisamy](https://github.com/PacktPubl
 - [License](#license)
 
 ## Background
+<img src="https://github.com/Panshark/COLA/blob/main/cola.png"/>
 Powered by deep representation learning, reinforcement learning (RL) provides an end-to-end learning framework capable of solving self-driving (SD) tasks without manual designs. However, time-varying nonstationary environments cause proficient but specialized RL policies to fail at execution time. For example, an RL-based SD policy trained under sunny days does not generalize well to the rainy weather. Even though meta learning enables the RL agent to adapt to new tasks/environments in a sample-efficient way, its offline operation fails to equip the agent with online adaptation ability when facing nonstationary environments. This work proposes an online meta reinforcement learning algorithm based on the **_conjectural online lookahead adaptation_** (COLA). COLA determines the online adaptation at every step by maximizing the agent's conjecture of the future performance in a lookahead horizon.  Experimental results demonstrate that under dynamically changing weather and lighting conditions, the COLA-based self-adaptive driving outperforms the baseline policies in terms of online adaptability.
 
 ## Install
