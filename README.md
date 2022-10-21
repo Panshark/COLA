@@ -1,6 +1,6 @@
 # COLA
 
-## Source code for *Self-Adaptive Driving in Nonstationary Environments through  Conjectural Online Lookahead Adaptation*
+## Source code for [*Self-Adaptive Driving in Nonstationary Environments through  Conjectural Online Lookahead Adaptation.*](https://github.com/Panshark/COLA/blob/main/icra_colav3.pdf)
 A3C model is original implementated by [Palanisamy](https://github.com/PacktPublishing/Hands-On-Intelligent-Agents-with-OpenAI-Gym) in Chapter 8, the structure of classifer is based on [Rashi Sharma](https://medium.com/swlh/natural-image-classification-using-resnet9-model-6f9dc924cd6d). Both models are deployed in [`deep.py`](function_approximator/deep.py).
 
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
@@ -85,7 +85,7 @@ You can find the full paper [here](https://github.com/Panshark/COLA/blob/main/ic
 If you find this work useful in your research, please cite:
 
 ```bibtex
-@misc{https://doi.org/10.48550/arxiv.2210.03209,
+@misc{COLA,
   doi = {10.48550/ARXIV.2210.03209},
   
   url = {https://arxiv.org/abs/2210.03209},
