@@ -13,6 +13,8 @@ A3C model is original implementated by [Palanisamy](https://github.com/PacktPubl
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
+- [References](#references)
+	- [Citing](#citing)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
 	- [Contributors](#contributors)
@@ -74,6 +76,34 @@ python COLA_gradient_agent.py --env Carla-v0 --test --gpu-id 0
 ```
 
 The gradient buffer directory could be modified by line 94 in `gradient_COLA_rl_agent.py`. Modify the `environment/carla_gym/config.json` to set `"dynamic_on": false`. And modify line 151 in `~/macad-gym/src/macad_gym/carla/scenarios.py` for collecting gradients from cloudy (1) and rainy (4). Then change back the `dynamic_on` botton. You can do the COLA Executing now.
+
+## References
+You can find the full paper [here](https://github.com/Panshark/COLA/blob/main/icra_colav3.pdf).
+
+### Citing:
+
+If you find this work useful in your research, please cite:
+
+```bibtex
+@misc{https://doi.org/10.48550/arxiv.2210.03209,
+  doi = {10.48550/ARXIV.2210.03209},
+  
+  url = {https://arxiv.org/abs/2210.03209},
+  
+  author = {Li, Tao and Lei, Haozhe and Zhu, Quanyan},
+  
+  keywords = {Robotics (cs.RO), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  
+  title = {Self-Adaptive Driving in Nonstationary Environments through Conjectural Online Lookahead Adaptation},
+  
+  publisher = {arXiv},
+  
+  year = {2022},
+  
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+
+```
 
 ## Maintainers
 
